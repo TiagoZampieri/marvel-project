@@ -8,6 +8,12 @@ import { FlexLayoutModule } from '@angular/flex-layout';
   declarations: [],
   imports: [
     CommonModule,
+    FlexLayoutModule.withConfig({
+      useColumnBasisZero: true
+    }),
+  ],
+  exports: [
+    CommonModule,
     FlexLayoutModule
   ]
 })
