@@ -1,3 +1,17 @@
-<div fxLayout="row">
-  <span>login</span>
+<div fxLayout="row" fxFlexFill fxLayoutAlign="center center">
+  <div class="login-box" fxLayout="column">
+    <div class="title-container">
+      <span class="title text-center">Login</span>
+    </div>
+    <mat-form-field appearance="outline">
+      <!-- <mat-icon matPrefix>sentiment_very_satisfied</mat-icon> -->
+      <mat-label>Usuário</mat-label>
+      <input [formControl]="loginForm" matInput placeholder="Digite seu @">
+      <mat-error>Login inválido</mat-error>
+    </mat-form-field>
+    <div fxLayout="row" fxLayoutAlign="end">
+      <button mat-button routerLink="'signup'">Ainda não sou cadastrado</button>
+      <button mat-raised-button color="primary" (click)="login()">Entrar</button>
+    </div>
+  </div>
 </div>
